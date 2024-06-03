@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário de Pergunta</title>
+</head>
+<body>
+
+<form id="myForm" onsubmit="return submitForm()">
+  <label for="nome">Quem é meu amorzinho?:</label><br>
+  <input type="text" id="nome" name="nome" required pattern= "laryssa"placeholder="Lary......"><br><br>
+  <button type="submit">Enviar</button>
+</form>
+
+<div id="resposta" style="display: none;">
+  <p>Voce esta completamente certo!!!</p>
+  <p id="nomeResposta"></p>
+</div>
+
+<script>
+function submitForm() {
+  var nome = document.getElementById("nome").value;
+  document.getElementById("nomeResposta").textContent = nome;
+  document.getElementById("resposta").style.display = "block";
+  return false; // Evita o envio do formulário tradicional
+}
+</script>
+
+</body>
+</html>

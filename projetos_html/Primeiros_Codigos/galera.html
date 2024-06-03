@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Âmago Ímã</title>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: rebeccapurple;
+    }
+
+    /* Estilos para botões */
+    .btn {
+        display: inline-block;
+        padding: 14px 28px;
+        font-size: 22px;
+        text-align: center;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        transition: background-color 0.3s;
+    }
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    /* Estilos para menus */
+    .menu {
+        list-style-type: none;
+        padding: 0;
+    }
+    .menu li {
+        display: inline-block;
+        margin-right: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .menu li a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #333;
+    }
+    .menu li a:hover {
+        background-color: #f4f4f4;
+    }
+
+    /* Estilos para imagens nos botões e menus */
+    .btn img,
+    .menu li a img {
+        vertical-align: center;
+        margin-right: 10px;
+        max-width: 25px; /* Ajusta a largura máxima das imagens */
+        border: #333;
+        font-size: large;
+ 
+    }
+
+    /* Estilos para rodapé */
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+    }
+
+    /* Estilos para player */
+    .player {
+        background-color: #f4f4f4;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+    .titulo {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bolder;
+    }
+</style>
+</head>
+<body>
+
+<h1 class="titulo">ÂMAGO ÍMÃ</h1>
+
+<!-- Exemplo de botão com imagem do Âmago Ímã -->
+<button class="btn"><img src="data:image/jpeg;base64,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" alt="Icon">Ouça Âmago Ímã</button>
+
+<!-- Exemplo de menu com imagens do Âmago Ímã -->
+<ul class="menu">
+    <li><a href="fotos.html">Fotos</a></li>
+    <li><a href="saibamais.html">Saiba-Mais</a></li>
+    <li><a href="fotos.html">Fotos</a></li>
+</ul>
+
+<!-- Rodapé -->
+<footer>
+    © 2024 Âmago Ímã. Todos os direitos reservados.
+</footer>
+
+<!-- Player -->
+<div class="player">
+    <!-- Aqui você pode adicionar o código do seu player de áudio ou vídeo -->
+    <!-- Por exemplo: <audio controls><source src="audio.mp3" type="audio/mpeg"></audio> -->
+    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1435467199&color=%231a1a24&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/amagoima" title="Âmago Ímã" target="_blank" style="color: #cccccc; text-decoration: none;">Âmago Ímã</a> · <a href="https://soundcloud.com/amagoima/moodz-1" title="MOODZ" target="_blank" style="color: #cccccc; text-decoration: none;">MOODZ</a></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Description</title>
+  <style>
+    /* Estilos existentes permanecem iguais */
+
+    .music-section {
+      display: none; /* Inicialmente oculta */
+    }
+
+    .music-block {
+      margin-bottom: 30px;
+    }
+
+    .music-info {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .music-image {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .soundcloud-player {
+      width: 100%;
+      max-width: 400px;
+      height: 166px; /* Altura padrão dos players do SoundCloud */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img class="profile-img" src="https://media.licdn.com/dms/image/D4D03AQE360rujxj5kg/profile-displayphoto-shrink_800_800/0/1708624177511?e=1718236800&v=beta&t=LFDvBmykLaYTwCPVeNL5vqrMw_iJkpDhHRBw0m7XwYw" alt="Your Profile Picture">
+      <div class="name">Carlos Denizard Guerra de Oliveira</div>
+      <nav>
+        <a href="#trabalhos">Works</a>
+        <a href="#musicas" onclick="toggleMusicSection()">Music</a> <!-- Adicionando evento onclick -->
+        <a href="#games">Games</a>
+        <a href="#roupas">Clothing</a>
+      </nav>
+    </div>
+
+    <div class="section-title">Professional Description:</div>
+    <p>I am a dedicated professional immersed in learning essential programming languages for the technology industry. Additionally, I have skills in sound design for games, merging my passion for technology with my experience in the music industry.</p>
+    
+    <div class="section-title">Musical Experience:</div>
+    <p>Currently, I work as a mixer and composer of soundtracks for games, movies, jingles, among others. I am also the vocalist and pianist of the band Amagoima (@amagoima), where I apply my musical skills in live performances and studio recordings.</p>
+    
+    <div class="section-title">Interest in Game Development:</div>
+    <p>I have participated in several game jams, which sparked my interest in game development. Currently, I am self-studying Unreal Engine and Unity, seeking to enhance my skills in this area.</p>
+    
+    <div class="section-title">Education and Future Studies:</div>
+    <p>I am currently studying Software Analysis and Development, aiming to expand my technical knowledge and prepare myself for future opportunities in the technology field. I plan to focus my studies on artificial intelligence, exploring ways to integrate this technology into game development and other applications.</p>
+    
+    <div class="section-title">Programming Skills:</div>
+    <p>My learning journey includes studying JavaScript, CSS, HTML, and Python (the latter being a more recent area of focus). I am committed to improving my programming skills to contribute more significantly to software and game development projects.</p>
+
+    <!-- Seção de música -->
+    <div class="music-section" id="musicSection">
+      <div class="section-title">Music:</div>
+      <div class="music-block">
+        <div class="music-info">
+          <h3>Game Title 1</h3>
+          <img src="game1.jpg" alt="Game 1 Image" class="music-image">
+          <iframe class="soundcloud-player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMusicSection() {
+      var musicSection = document.getElementById("musicSection");
+      if (musicSection.style.display === "none") {
+        musicSection.style.display = "block";
+      } else {
+        musicSection.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

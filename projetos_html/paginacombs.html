@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de Estoque Básico</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Adiciona Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'JetBrains', sans-serif;
+      background-color: rgb(240, 216, 179);
+      background-image: url("https://i.pinimg.com/originals/fc/3f/9d/fc3f9df283c19a016d0c7084519d765b.gif");
+      margin: 0; /* Remove a margem padrão do corpo */
+      padding-bottom: 50px; /* Adiciona um preenchimento na parte inferior para evitar que o rodapé sobreponha o conteúdo */
+    }
+    header img {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  
+    .animated-background {
+      background-image: url('https://i.pinimg.com/originals/fc/3f/9d/fc3f9df283c19a016d0c7084519d765b.gif');
+      background-size: cover;
+      animation: animatedBackground 10s infinite;
+    }
+    @keyframes animatedBackground {
+      0% { background-position: 0 0; }
+      100% { background-position: 100% 100%; }
+    }
+    .options button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      background-color: #007bff;
+      color: #fff;
+    }
+    .options button:hover {
+      background-color: #0056b3;
+    }
+    #googleForm iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 5px 0; /* Reduz o preenchimento do rodapé */
+      background-color: #333;
+      color: #fff;
+    }
+    .made-by {
+      font-size: 12px;
+      margin-bottom: 0; /* Remove a margem inferior */
+    }
+    .image-block img {
+      width: 100px;
+      height: auto;
+    }
+  </style>
+</head>
+<body class="animated-background">
+
+  <header class="text-center">
+  
+    <h1>Controle de Estoque e Caixa</h1>
+  </header>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <button onclick="showForm('googleForm')" class="btn btn-primary">📝 Caixa Diario</button>
+        <button onclick="showForm('otherGoogleForm')" class="btn btn-primary">📝 Estoque/Peças</button>
+        <a href="https://docs.google.com/spreadsheets/d/1CaucPn8caIlz1ncFfLXAjpBKM4Y6lGGdlX6ERdempis/edit?usp=sharing" target="_blank" class="btn btn-primary">📊 Planilha Excel</a>
+        <div id="googleForm" style="display: none;">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYA7RBnMeDGFh4msFj5jyXuGOMdu_22CwCWIgdu4YGOetgBA/viewform?embedded=true" frameborder="0">Carregando…</iframe>
+        </div>
+        <div id="otherGoogleForm" style="display: none;">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScygThz7137Aj2hfx7ixbgcucfMs4iTVJQyy8Ok0ECsygJaLA/viewform?embedded=true" width="640" height="3337" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="mt-5">
+    <p>Veste-leve</p>
+    <p class="made-by">made by Denizard</p>
+  </footer>
+  
+  <!-- Adiciona Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script>
+    function showForm(formId) {
+      // Oculta todos os formulários
+      var forms = document.querySelectorAll('div[id$="Form"]');
+      forms.forEach(function(form) {
+        form.style.display = "none";
+      });
+  
+      // Exibe o formulário desejado
+      document.getElementById(formId).style.display = "block";
+    }
+  </script>
+  

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "docxtemplater": "^3.46.2",
+    "exceljs": "^4.4.0",
+    "readline-sync": "^1.4.10",
+    "xlsx": "^0.18.5"
+  }
+}

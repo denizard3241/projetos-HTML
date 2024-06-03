@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        body {
+            font-family: "JetBrains", sans-serif; /* Definindo a fonte geral */
+            margin: 0; /* Removendo margens padrão do body */
+            padding: 0; /* Removendo padding padrão do body */
+            background-image: url('https://i.pinimg.com/originals/fc/3f/9d/fc3f9df283c19a016d0c7084519d765b.gif'); /* Definindo o GIF como fundo */
+            background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
+        }
+        .container {
+            text-align: center; /* Centralizar conteúdo */
+            margin-top: 20px;
+        }
+        iframe {
+            width: 80%;
+            height: 600px;
+            margin: 20px auto;
+            display: block;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tabela</h1>
+        <iframe src="https://docs.google.com/spreadsheets/d/1CaucPn8caIlz1ncFfLXAjpBKM4Y6lGGdlX6ERdempis/edit?usp=sharing"></iframe>
+        <!-- Substitua a URL acima pela URL do seu documento do Google Docs -->
+
+        <button onclick="voltar()">Voltar</button>
+    </div>
+
+    <script>
+        function voltar() {
+            window.location.href = "pagina_principal.html";
+            // Redireciona para a página principal
+        }
+    </script>
+</body>
+</html>

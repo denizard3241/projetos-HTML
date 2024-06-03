@@ -1,0 +1,86 @@
+<!-- music.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music</title>
+  <style>
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0; /* Cor de fundo aberto para inserir imagens */
+      color: #333; /* Cor do texto */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .music-info {
+      text-align: center;
+      margin-bottom: 40px; /* Aumentei o espaçamento abaixo de cada bloco de música */
+    }
+
+    .music-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px; /* Espaçamento entre blocos de música */
+    }
+
+    .music-block img {
+      max-width: 200px; /* Tamanho máximo das imagens dos jogos */
+      margin-right: 20px; /* Espaçamento entre a imagem e o player do SoundCloud */
+    }
+
+    .soundcloud-player {
+      width: 100%;
+      max-width: 400px;
+      height: 166px; /* Altura padrão dos players do SoundCloud */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="music-info">
+      <div class="music-block">
+        <img src="game1.jpg" alt="Game 1 Image"> <!-- Adicione a URL da imagem do jogo aqui -->
+        <iframe class="soundcloud-player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+      </div>
+
+      <div class="music-block">
+        <img src="game2.jpg" alt="Game 2 Image"> <!-- Adicione a URL da imagem do jogo aqui -->
+        <iframe class="soundcloud-player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/294&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+      </div>
+
+      <div class="music-block">
+        <img src="game3.jpg" alt="Game 3 Image"> <!-- Adicione a URL da imagem do jogo aqui -->
+        <iframe class="soundcloud-player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/295&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+      </div>
+
+      <div class="music-block">
+        <img src="game4.jpg" alt="Game 4 Image"> <!-- Adicione a URL da imagem do jogo aqui -->
+        <iframe class="soundcloud-player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/296&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+      </div>
+
+      <div class="music-block">
+        <img src="game5.jpg" alt="Game 5 Image"> <!-- Adicione a URL da imagem do jogo aqui -->
+        <iframe class="soundcloud-player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/297&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+      </div>
+
+      <!-- Bloco para um jogo de demonstração -->
+      <div class="music-block">
+        <img src="demo-game.jpg" alt="Demo Game Image"> <!-- Adicione a URL da imagem do jogo de demonstração aqui -->
+        <iframe class="soundcloud-player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/298&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+      </div>
+      <p>Descrição do Jogo de Demonstração: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut gravida arcu, vel tempor mi.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário para Adicionar Dados em Documento Word</title>
+</head>
+<body>
+    <h2>Formulário para Adicionar Dados em Documento Word</h2>
+
+    <form id="meuFormulario">
+        <label for="nome">Nome:</label>
+        <input type="number" id="nome" name="nome" required placeholder="Digite o nome" autofocus>
+        <br><br>
+
+        <label for="idade">Idade:</label>
+        <select id="idade" name="idade">
+            <option value="0-17">0-17</option>
+            <option value="18-35">18-35</option>
+            <option value="36+">36+</option>
+        </select>
+        <br><br>
+
+        <button type="button" onclick="adicionarAoDocumento()">Adicionar ao Documento Word</button>
+    </form>
+
+    <script>
+        function adicionarAoDocumento() {
+            var nome = document.getElementById("nome").value;
+            var idade = document.getElementById("idade").value;
+
+            // Cria o conteúdo a ser adicionado ao documento Word
+            var conteudo_adicional = "\n\nNome: " + nome + "\nIdade: " + idade;
+
+            // Cria um elemento de link temporário
+            var link = document.createElement("a");
+            link.style.display = "none";
+
+            // Cria um Blob contendo o conteúdo a ser adicionado ao documento Word
+            var blob = new Blob([conteudo_adicional], { type: "text/plain" });
+
+            // Define o URL do objeto Blob como o href do link
+            link.href = URL.createObjectURL(blob);
+
+            // Define o nome do arquivo
+            link.download = "dados_usuario.doc";
+
+            // Adiciona o link ao corpo do documento
+            document.body.appendChild(link);
+
+            // Simula um clique no link para iniciar o download
+            link.click();
+
+            // Remove o link do corpo do documento
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>

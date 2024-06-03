@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Requisições HTTP com PHP</title>
+</head>
+<body>
+    <h1>Exemplo de Requisições HTTP com PHP</h1>
+    
+    <form action="get_example.php" method="GET">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <form action="post_example.php" method="POST">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Outros formulários para PUT, DELETE, etc., podem ser adicionados aqui -->
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerar Planilha Excel</title>
+</head>
+<body>
+    <button onclick="gerarExcel()">Gerar Planilha Excel</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+    <script>
+        function gerarExcel() {
+            // Conteúdo da planilha
+            var planilha = [
+                ["Data", "Estudo", "Prova"],
+                ["18/04/2024", "Módulo 7 Desenvolvimento Web", "-"],
+                ["19/04/2024", "Módulo 8 Desenvolvimento Web", "Prova Desenvolvimento Web"],
+                ["20/04/2024", "Revisão Desenvolvimento Web", "-"],
+                ["21/04/2024", "Módulos 1 e 2 Arquitetura de Computadores", "-"],
+                ["22/04/2024", "Módulos 3 e 4 Arquitetura de Computadores", "-"],
+                ["23/04/2024", "Módulos 5 e 6 Arquitetura de Computadores", "Prova Arquitetura de Computadores"],
+                ["24/04/2024", "Módulos 7 e 1 Introdução à Segurança de Computadores", "-"],
+                ["25/04/2024", "Módulos 2 e 3 Introdução à Segurança de Computadores", "-"],
+                ["26/04/2024", "Módulos 4 e 5 Introdução à Segurança de Computadores", "Prova Introdução à Segurança de Computadores"],
+                ["27/04/2024", "Módulos 6 e 1 Paradigmas de Linguagem de Programação em Python", "-"],
+                ["28/04/2024", "Módulos 2 e 3 Paradigmas de Linguagem de Programação em Python", "-"],
+                ["29/04/2024", "Módulos 4 e 5 Paradigmas de Linguagem de Programação em Python", "Prova Paradigmas de Linguagem de Programação em Python"],
+                ["30/04/2024", "Módulos 6 e 1 Pensamento Computacional", "-"],
+                ["01/05/2024", "Módulos 2 e 3 Pensamento Computacional", "-"],
+                ["02/05/2024", "Módulos 4 e 5 Pensamento Computacional", "Prova Pensamento Computacional"],
+                ["03/05/2024", "Revisão para possíveis dúvidas", "Revisão para possíveis dúvidas"]
+            ];
+
+            // Criar workbook
+            var workbook = XLSX.utils.book_new();
+            var worksheet = XLSX.utils.aoa_to_sheet(planilha);
+
+            // Adicionar a planilha ao workbook
+            XLSX.utils.book_append_sheet(workbook, worksheet, "Plano de Estudo e Prova");
+
+            // Salvar o workbook como um arquivo XLSX
+            XLSX.writeFile(workbook, "plano_estudo_e_prova.xlsx");
+        }
+    </script>
+</body>
+</html>

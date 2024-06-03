@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de Estoque Básico</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'JetBrains', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      position: relative; /* Adiciona uma posição relativa ao body para que possamos posicionar o bloco da imagem */
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      width: 100%;
+    }
+    header img {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .options {
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 40px; /* Adiciona uma margem superior maior */
+    }
+    .options button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      background-color: #007bff;
+      color: #fff;
+    }
+    .options button:hover {
+      background-color: #0056b3;
+    }
+    #googleForm iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+    }
+    .animated-background {
+      background-image: url('https://i.pinimg.com/originals/fc/3f/9d/fc3f9df283c19a016d0c7084519d765b.gif');
+      background-size: cover;
+      animation: animatedBackground 10s infinite;
+    }
+    @keyframes animatedBackground {
+      0% { background-position: 0 0; }
+      100% { background-position: 100% 100%; }
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+    }
+    .made-by {
+      font-size: 12px;
+    }
+    .image-block {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .image-block img {
+      width: 100px;
+      height: auto;
+    }
+    .image-block.left { /* Posiciona a imagem à esquerda */
+      left: 20px;
+    }
+  </style>
+</head>
+<body class="animated-background">
+ 
+  <header>
+    <h1>Controle de Estoque e Caixa</h1> <!-- Adiciona o título -->
+  </header>
+
+  <div class="options">
+    <button onclick="showForm()">📝 Formulário</button>
+    <a href="https://docs.google.com/spreadsheets/d/1CaucPn8caIlz1ncFfLXAjpBKM4Y6lGGdlX6ERdempis/edit?usp=sharing" target="_blank"><button>📊 Planilha Excel</button></a>
+    <div id="googleForm" style="display: none;">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYA7RBnMeDGFh4msFj5jyXuGOMdu_22CwCWIgdu4YGOetgBA/viewform?embedded=true" frameborder="0">Carregando…</iframe>
+    </div>
+  </div>
+
+
+  <footer>
+    <p>Veste-leve</p>
+    <p class="made-by">made by Denizard</p>
+  </footer>
+
+  <script>
+    function showForm() {
+      document.getElementById("googleForm").style.display = "block";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+/* Estilo para o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0d69c6; /* fundo cinza */
+  color: #333;
+}
+
+/* Estilo para o título */
+.titulo {
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px; /* aumentando o espaço superior */
+}
+
+/* Estilo para o botão de voltar */
+.btn-voltar {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-voltar:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para a tabela e calculadora */
+#hot {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#calculator {
+  /* Adicione estilos para o calculador aqui */
+}
+
+/* Estilo para o rodapé */
+footer.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Estilo para preencher mais a tela */
+html, body {
+  height: 100%;
+}
+
+.nav {
+  background-color: #ffd700; /* fundo amarelo */
+  padding: 20px 0; /* aumentando o espaçamento */
+}
+
+#main-content {
+  background-color: #87ceeb; /* fundo azul claro */
+  min-height: 80%; /* definindo altura mínima */
+  padding: 40px; /* aumentando o espaçamento */
+}
+.estoq {
+  text-align: center;
+}

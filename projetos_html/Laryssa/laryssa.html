@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spam de Amor para Laryssa</title>
+<script>
+    var mensagens = [
+        "Laryssa, Te amo tanto ",
+        "Quero viver minha vida todinha contigo, sabia?",
+        "pode contar comigo pra qualquer coisa mesmo!",
+        "Você é o meu sol em dias nublados, Laryssa!(essa o chat fez como exemplo, acertou!)",
+        "tu é meu amor demais que demais",
+        "Casa comigo",
+        "te amo te amo te amo",
+        "te amo infinito",
+        "Laryssa, meu coração é todo seu!",
+        "Com você, Laryssa, eu encontrei a felicidade plena!"
+    ];
+
+    function exibirMensagens() {
+        mensagens.forEach(function(mensagem, index) {
+            setTimeout(function() {
+                alert(mensagem);
+                if (index < mensagens.length - 1) {
+                    mudarImagem();
+                }
+            }, 1000 * index);
+        });
+    }
+
+    function mudarImagem() {
+        var imagens = [
+            "",
+            "https://example.com/imagem2.jpg",
+            "https://example.com/imagem3.jpg",
+            // Adicione mais URLs de imagens conforme necessário
+        ];
+
+        var novaImagem = imagens[Math.floor(Math.random() * imagens.length)];
+        document.body.style.backgroundImage = "url('" + novaImagem + "')";
+    }
+
+    window.onload = function() {
+        exibirMensagens();
+    };
+</script>
+<style>
+    /* Estilizando a caixa de alerta */
+    .alert {
+        width: 300px;
+        padding: 20px;
+        font-size: 20px;
+        border-radius: 10px;
+        background-color: pink;
+        text-align: center;
+    }
+    .head {
+        background-color: purple;
+    }
+</style>
+</head>
+<body>
+</body>
+</html>

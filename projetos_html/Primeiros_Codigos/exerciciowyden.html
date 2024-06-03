@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <title>Praticando Javascript - Exercício 1</title>
+</head>
+<body>
+
+<!-- Não há conteúdo no corpo do HTML, pois o JavaScript manipulará tudo -->
+
+<script type="text/javascript">
+    // Pedir ao usuário para inserir dois números usando prompt
+    var numero1 = prompt("Insira o primeiro número: ");
+    var numero2 = prompt("Insira o segundo número: ");
+
+    // Chamar a função divida com os números inseridos pelo usuário
+    var resultadoDivisao = divida(numero1, numero2); 
+
+    // Exibir o resultado da divisão em uma caixa de diálogo alert
+    alert('O resultado da divisão é igual a: ' + resultadoDivisao); 
+
+    // Definir a função divida para realizar a divisão
+    function divida(numero1, numero2) {
+        var resultado = 0; 
+      
+        // Realizar a divisão
+        resultado = numero1 / numero2;
+
+        // Retornar o resultado
+        return resultado;
+    }
+</script>
+</html>

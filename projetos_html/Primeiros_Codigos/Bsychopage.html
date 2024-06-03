@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bsycho~</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Estilo para o menu de navegação no topo */
+.menu {
+  position: fixed;
+  top: 20px; /* Posiciona o menu no topo da página */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  z-index: 9999; /* Para garantir que o menu fique sobreposto */
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Remove margens */
+  display: flex; /* Torna os itens do menu flexíveis */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+.menu ul li {
+  margin: 0 10px; /* Adiciona espaço entre os itens do menu */
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white; /* Cor do texto do menu */
+  font-size: 18px; /* Tamanho dos ícones do menu */
+  display: block; /* Coloca o texto abaixo dos ícones */
+  margin-top: 5px; /* Espaçamento entre o ícone e o texto */
+  font-weight: bold; /* Deixa o texto em negrito */
+}
+
+.menu ul li a:hover {
+  color: #666; /* Cor do texto do menu ao passar o mouse */
+}
+
+/* Estilo para o conteúdo do site */
+/* Estilo para o conteúdo do site */
+.content {
+  padding: 20px;
+  background-image: url('https://xmple.com/wallpaper/gradient-black-purple-linear-3840x2160-c2-000000-800080-a-60-f-14.svg'); /* Substitua 'URL_DA_IMAGEM' pela URL da imagem desejada */
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 120px); /* Ajusta a altura para ocupar toda a tela menos o rodapé */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Century Gothic', sans-serif; /* Fonte para os textos */
+  overflow-y: auto; /* Adiciona uma barra de rolagem vertical */
+}
+
+/* Estilo para os textos */
+.text {
+  color: #c20d0d; /* Cor do texto */
+  font-size: 40px; /* Tamanho do texto */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com opacidade */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 10px; /* Borda arredondada */
+}
+
+
+.subtitle {
+  color: #fff; /* Cor dos subtítulos */
+  font-size: 24px; /* Tamanho grande para os subtítulos */
+}
+
+/* Estilo para os textos */
+.text {
+  color: #fff; /* Cor do texto */
+  font-size: 14px; /* Tamanho do texto */
+}
+
+/* Estilo para as seções de conteúdo */
+.section {
+  margin-bottom: 20px; /* Espaçamento entre as seções */
+}
+
+/* Estilo para o espaço do vídeo do YouTube */
+.youtube-video {
+  width: calc(33.33% - 20px); /* Ajusta a largura dos vídeos, considerando 3 vídeos por linha */
+  margin-right: 20px; /* Espaçamento entre os vídeos */
+}
+
+.youtube-video:last-child {
+  margin-right: 0; /* Remove o espaçamento à direita do último vídeo */
+}
+
+.youtube-video iframe {
+  width: 100%; /* Faz o vídeo ocupar toda a largura do contêiner */
+}
+
+/* Estilo para o rodapé */
+.footer {
+  background-color: #222; /* Cor do fundo do rodapé */
+  color: white; /* Cor do texto do rodapé */
+  text-align: center; /* Centraliza o texto */
+  padding: 5px 0; /* Espaçamento interno */
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid #666; /* Borda superior fina */
+}
+
+  </style>
+</head>
+<body>
+  <!-- Menu de navegação -->
+  <div class="menu">
+    <ul>
+      <!-- Altere os links para abrir na mesma aba -->
+      <li><a href="#" onclick="changeContent('home')">🏠<br>Início</a></li>
+      <li><a href="#" onclick="changeContent('music')">🎵<br>Músicas</a></li>
+      <li><a href="#" onclick="changeContent('games')">🎮<br>Games</a></li>
+      <li><a href="#" onclick="changeContent('contact')">✉️<br>Contato</a></li>
+      <!-- Adicione mais itens de menu conforme necessário -->
+    </ul>
+  </div>
+  
+  <!-- Conteúdo do site -->
+  <div class="content">
+    <!-- Título principal -->
+    <h1 class="title">Bsycho~</h1>
+    
+    <!-- Textos fictícios -->
+    <div id="home-content" class="section">
+      <h2 class="subtitle">Início</h2>
+      <p class="text">
+Bem-vindo ao Mundo Bsycho~
+
+Em um universo onde a criatividade é a matéria-prima, a Bsycho~ emerge como um farol de inovação e paixão. Somos mais do que uma empresa de games e trilhas sonoras - somos artesãos da imaginação, tecendo narrativas imersivas e trilhas sonoras envolventes que dão vida a mundos fictícios.
+
+Imaginação é nossa moeda, e a criação de jogos indie é nossa paixão ardente. No coração de nossa jornada está o processo fascinante de conceber e dar vida a universos interativos, onde cada pixel conta uma história e cada melodia evoca emoções intensas.
+
+Aqui na Bsycho~, somos uma equipe diversificada e unida, impulsionada por uma visão compartilhada de excelência criativa. Gabriel Pessoa, com seu domínio dos códigos e sua habilidade em conjurar mundos digitais, lidera nossa equipe com maestria técnica e visão inovadora. Denizard Guerra, o mestre das notas, traz vida aos nossos jogos com trilhas sonoras que ecoam nos corações dos jogadores. E Helton Leyendecker, com sua perícia em mixagem e masterização, eleva nossas composições a novas alturas de perfeição sonora.
+
+Juntos, criamos experiências que desafiam as fronteiras do possível, fundindo arte e tecnologia em uma sinfonia de criatividade. Nossos jogos não são apenas entretenimento; são jornadas emocionantes, mergulhos profundos na mente humana, e convites para explorar os cantos mais recônditos da imaginação.
+
+Bem-vindo ao mundo Bsycho~ - onde a fantasia se torna realidade e os sonhos ganham vida. Venha conosco e embarque em uma aventura que desafiará sua mente, tocará sua alma e mudará sua percepção do que é possível nos reinos da criação digital..</p>
+    </div>
+    
+    <div id="music-content" class="section" style="display: none;">
+      <h2 class="subtitle">Músicas</h2>
+      <!-- Adicione o código de incorporação do SoundCloud aqui -->
+      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1541345425&color=%230071e3&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/denizard" title="Denizard~" target="_blank" style="color: #cccccc; text-decoration: none;">Denizard~</a> · <a href="https://soundcloud.com/denizard/mangueboy-stage-01-02" title="MangueBoy - Stage 01 - 02" target="_blank" style="color: #cccccc; text-decoration: none;">MangueBoy - Stage 01 - 02</a></div>
+    </div>
+
+    <div id="games-content" class="section" style="display: none;">
+      <h2 class="subtitle">Games</h2>
+      <!-- Adicione o código de incorporação de vídeos do YouTube aqui -->
+      <div class="youtube-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="youtube-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="youtube-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <div class="footer">
+    © 2024 Byscho | Termos de uso | Política de privacidade
+  </div>
+
+  <!-- Script para trocar o conteúdo com base na categoria do menu selecionada -->
+  <script>
+    function changeContent(category) {
+      // Oculta todos os conteúdos
+      var contents = document.querySelectorAll('.section');
+      contents.forEach(function(content) {
+        content.style.display = 'none';
+      });
+      
+      // Mostra o conteúdo correspondente à categoria selecionada
+      var selectedContent = document.getElementById(category + '-content');
+      if (selectedContent) {
+        selectedContent.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>

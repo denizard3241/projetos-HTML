@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Interativo</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Cor de fundo */
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que os botões quebrem a linha conforme necessário */
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os botões */
+    padding: 20px;
+  }
+
+  .button {
+    background: linear-gradient(to bottom, #ffffff 0%, #cccccc 100%);
+    border: 1px solid #ccc; /* Borda muito fina */
+    border-radius: 50%; /* Forma redonda */
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: flex; /* Tornar os botões flexíveis */
+    flex-direction: column; /* Alinhar o conteúdo verticalmente */
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    width: 150px; /* Tamanho fixo */
+    height: 150px; /* Tamanho fixo */
+    overflow: hidden; /* Para garantir que a imagem não ultrapasse os limites do botão */
+    position: relative; /* Permitir posicionamento relativo para a imagem */
+  }
+
+  .button img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Garantir que a imagem não ultrapasse os limites do botão */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #333; /* Cor de fundo do menu */
+    color: white;
+    padding: 10px 0;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+  }
+
+  .menu a:hover {
+    background-color: #555; /* Cor de fundo do item do menu ao passar o mouse */
+  }
+
+  .title {
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="menu">
+  <a href="#">Início</a>
+  <a href="#">Suporte</a>
+  <a href="#">Comunidade</a>
+  <a href="#">Fórum</a>
+  <a href="https://www.instagram.com/laryssaraujo/" target="_blank">Fotos</a>
+</div>
+
+<h2 class="title">Laryssa gatinha demais</h2>
+
+<div class="container">
+  <a href="https://www.instagram.com/p/C3YwnZ9ufho/?img_index=5" class="button">
+    <span>Laryssa</span>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzv1lPeEndcKF2krA8c-zLMj5Wm2-dvaj5mflRHv9lqF9-QSupuLK9D9l-rw&s" alt="Imagem 2">
+  </a>
+  <a href="https://www.instagram.com/p/C3YwnZ9ufho/?img_index=5" class="button">
+    <span>Laryssa</span>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzv1lPeEndcKF2krA8c-zLMj5Wm2-dvaj5mflRHv9lqF9-QSupuLK9D9l-rw&s" alt="Imagem 2">
+  </a>
+  <a href="https://www.instagram.com/p/C3YwnZ9ufho/?img_index=5" class="button">
+    <span>Laryssa</span>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzv1lPeEndcKF2krA8c-zLMj5Wm2-dvaj5mflRHv9lqF9-QSupuLK9D9l-rw&s" alt="Imagem 2">
+  </a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ÂMAGO ÍMÃ</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: darkslateblue;
+    }
+    .container {
+        margin: 0 auto;
+        width: 60%;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 20px;
+    }
+    .saiba-mais {
+        display: none;
+    }
+    .saiba-mais.active {
+        display: block;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>ÂMAGO ÍMÃ</h1>
+    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gov.br%2Fplanalto%2Fpt-br%2Facesso-a-informacao%2Fparticipacao-social%2Fouvidoria%2Farte%2FBotao_saibaMais.png%2Fimage_view_fullscreen&psig=AOvVaw2mfYWn-W3VR4UzlmjV_A3v&ust=1711750214516000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMin_838l4UDFQAAAAAdAAAAABAE" alt="ÂMAGO ÍMÃ Logo" width="200">
+    <div>
+        <p></p>
+        <a href="#" id="saiba-mais-btn">Saiba Mais</a>
+        <div class="saiba-mais" id="saiba-mais-content">
+            <p>Mais informações sobre a banda...</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('saiba-mais-btn').addEventListener('click', function() {
+        document.getElementById('saiba-mais-content').classList.toggle('active');
+    });
+</script>
+</body>
+</html>

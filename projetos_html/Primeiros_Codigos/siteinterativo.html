@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagina Interativa</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Impede a barra de rolagem */
+}
+
+#scene {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://i.imgur.com/TwioRup.gif');
+    background-size: auto; /* Garante que a imagem cubra toda a tela */
+    position: relative;
+}
+
+#character {
+    width:250px;
+    height: 50px;
+    background-color: red; /* Cor do personagem */
+    position: absolute;
+    bottom: 20px; /* Altura do chão */
+    left: 0;
+    transition: bottom 0.9s ease; /* Adiciona uma transição suave ao movimento vertical */
+}
+
+#ground {
+    width: 100%;
+    height: 10px; /* Altura do chão */
+    background-color: #060c06; /* Cor do chão */
+    position: absolute;
+    bottom: 0;
+}
+</style>
+</head>
+<body>
+<div id="scene">
+    <div id="character"></div>
+    <div id="ground"></div> <!-- Adiciona o chão -->
+</div>
+
+<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const character = document.getElementById('character');
+    const ground = document.getElementById('ground');
+    let isJumping = false;
+    let gravity = 1; // Ajuste conforme necessário
+    let jumpStrength = 10; // Ajuste conforme necessário
+
+    function moveLeft() {
+        const currentPosition = parseInt(window.getComputedStyle(character).getPropertyValue('left'));
+        character.style.left = (currentPosition - 10) + 'px'; // Ajuste a velocidade de movimento para a esquerda
+    }
+
+    function moveRight() {
+        const currentPosition = parseInt(window.getComputedStyle(character).getPropertyValue('left'));
+        character.style.left = (currentPosition + 10) + 'px'; // Ajuste a velocidade de movimento para a direita
+    }
+
+    function jump() {
+        if (!isJumping) {
+            isJumping = true;
+            let jumpInterval = setInterval(function() {
+                let currentPosition = parseInt(window.getComputedStyle(character).getPropertyValue('bottom'));
+                let newPosition = currentPosition + jumpStrength;
+                if (newPosition < 10) { // Eleva o personagem até uma altura máxima de 200 pixels
+                    character.style.bottom = newPosition + 'px';
+                } else {
+                    clearInterval(jumpInterval);
+                    let fallInterval = setInterval(function() {
+                        newPosition += gravity;
+                        if (newPosition <= 20) { // Verifica se o personagem chegou ao chão
+                            isJumping = false;
+                            character.style.bottom = '110px'; // Altura do chão
+                            clearInterval(fallInterval);
+                        } else {
+                            character.style.bottom = newPosition + 'px';
+                        }
+                    }, 20);
+                }
+            }, 20);
+        }
+    }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === ' ') {
+            jump();
+        } else if (event.key === 'ArrowLeft') {
+            moveLeft();
+        } else if (event.key === 'ArrowRight') {
+            moveRight();
+        }
+    });
+
+});
+</script>
+</body>
+</html>
